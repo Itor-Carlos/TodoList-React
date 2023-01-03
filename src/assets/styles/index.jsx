@@ -42,7 +42,7 @@ export const CardContainer = styled.div`
    margin-left: 10px;
    background-color: #4F4F4F;
 
-   width: 300px;
+   margin-bottom: 1px;
 
    article h3{
       position: relative;
@@ -58,4 +58,11 @@ export const CardContainer = styled.div`
       color: #fff;
       translate: (20px,10px);
    }
+`
+export const CardListContainer = styled.div`
+   margin-top: 30px;
+   display: grid;
+   row-gap: 130px;
+   grid-template-columns: repeat(3, 1fr);
+   grid-auto-rows: 200px;
 `
