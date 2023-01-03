@@ -32,3 +32,30 @@ export const HeaderContainer = styled.header`
       transition: border-color 0.2s ease-in;
    }
 `
+
+export const CardContainer = styled.div`
+   height: 300px;
+   transition: 1.2s;
+   display: flex;
+   justify-content: center;
+   text-align: center;
+   margin-left: 10px;
+   background-color: #4F4F4F;
+
+   width: 300px;
+
+   article h3{
+      position: relative;
+      bottom: -150px;
+   }
+
+   article p{
+      opacity: 0.5;
+   }
+
+   &:hover{
+      background-color: #6A5ACD;
+      color: #fff;
+      translate: (20px,10px);
+   }
+`
