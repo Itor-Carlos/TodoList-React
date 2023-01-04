@@ -74,6 +74,27 @@ export const FormContainer = styled.div`
    display: flex;
    justify-content: center;
    flex-direction: column;
+   justify-items: center;
+
+   div{
+      display: flex;
+      justify-content: center;
+   }
+   
+   button{
+      width: 33%;
+      background: #DCDCDC;
+      margin-top: 24px;
+      border-radius: 7px;
+      height: 40px;
+      font-size: 16px;
+   }
+
+   button:hover{
+      cursor: pointer;
+      background: #ddd;
+   }
+
 `
 export const FormGroupContainer = styled.div`
    display: flex;
@@ -106,5 +127,14 @@ export const FormGroupContainer = styled.div`
 
    & + & {
       margin-top: 14px;
+   }
+`
+
+export const NewTodoContainer = styled.div`
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   h1{
+      text-align: center;
    }
 `
