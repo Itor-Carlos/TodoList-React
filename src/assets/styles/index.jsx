@@ -66,3 +66,13 @@ export const CardListContainer = styled.div`
    grid-template-columns: repeat(3, 1fr);
    grid-auto-rows: 200px;
 `
+
+export const FormContainer = styled.div`
+   background-color: #4F4F4F;
+   padding: 32px;
+   border-radius: 8px;
+   width: 320px;
+   display: flex;
+   justify-content: center;
+`
+
