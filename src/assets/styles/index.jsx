@@ -71,8 +71,40 @@ export const FormContainer = styled.div`
    background-color: #4F4F4F;
    padding: 32px;
    border-radius: 8px;
-   width: 320px;
    display: flex;
    justify-content: center;
+   flex-direction: column;
 `
+export const FormGroupContainer = styled.div`
+   display: flex;
+   align-items: center;
+   justify-content: left;
+   flex-direction: column;
+   
+   span{
+      font-size: 14px;
+   }
 
+   input, select, textarea{
+      height: 40px;
+      width: 33%;
+      padding: 0;
+      border: 1px solid #ccc;
+      margin: 0;
+      box-sizing: border-box;
+      border-radius: 5px;
+      padding-left: 10px;
+      font-family: Verdana;
+      font-size: 14px;
+      color: #333;
+      margin-top: 2px;
+   }
+   
+   textarea{
+      height: 120px;
+   }
+
+   & + & {
+      margin-top: 14px;
+   }
+`
