@@ -8,7 +8,7 @@ export default function CardList({cardLists}){
    return (
       <CardListContainer>
          {cardLists.map(element => (
-            <Card key={element.id} name={element.name} description={element.description} todoStatus={element.todoStatus} /> 
+            <Card key={element.id} name={element.name} description={element.descricao} todoStatus={element.todoStatus} /> 
          ))}
       </CardListContainer>
    )
