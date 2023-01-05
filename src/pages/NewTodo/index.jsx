@@ -6,7 +6,7 @@ export default function NewTodo(){
    return (
       <NewTodoContainer>
          <h1>New Todo</h1>
-         <Form/>
+         <Form />
       </NewTodoContainer>
    )
 }
