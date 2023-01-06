@@ -46,7 +46,15 @@ export const CardContainer = styled.div`
 
    article h3{
       position: relative;
-      bottom: -150px;
+      bottom: -120px;
+   }
+
+   button{
+      position: relative;
+      bottom: -110px;
+      background-color: #4F4F4F;
+      border: none;
+      transition: 1.65s;
    }
 
    article p{
@@ -57,6 +65,12 @@ export const CardContainer = styled.div`
       background-color: #6A5ACD;
       color: #fff;
       translate: (20px,10px);
+
+      button{
+         transition: 1.2s;
+         background-color: #6A5ACD;
+      }
+
    }
 `
 export const CardListContainer = styled.div`

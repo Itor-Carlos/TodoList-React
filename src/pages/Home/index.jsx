@@ -26,10 +26,26 @@ export default function Home(){
       fetchCards();
    }, [fetchCards])
 
+   const deletePost = async(id) => {
+      try{
+         const response = await api.delete(`/todos/${id}`)
+         if(response.status === 204){
+            const uptadetedCards = cards.filter(element => element.id !== id);
+            setCards(uptadetedCards)
+         }
+         else{
+            console.log(response.data)
+         }
+      }
+      catch(error){
+         console.log(error)
+      }
+   }
+
    return (
       <>
          <Header/>
-         <CardList cardLists={cards}/>
+         <CardList deletePost={deletePost} cardLists={cards}/>
       </>
    )
 }

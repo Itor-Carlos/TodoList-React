@@ -1,7 +1,10 @@
 import React from "react";
 import { CardContainer } from "../../assets/styles";
 
-export default function Card({name, description, todoStatus}){
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+export default function Card({id,name, description, todoStatus, deletePost}){
    return (
       <CardContainer>
          <article>
@@ -9,6 +12,12 @@ export default function Card({name, description, todoStatus}){
             <p>{description}</p>
 
             <h3>{todoStatus}</h3>
+
+            <div>
+               <button onClick={() => deletePost(id)}>
+                  <FontAwesomeIcon icon={faTrash} />
+               </button>
+            </div>
          </article>
       </CardContainer>
    )
