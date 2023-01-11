@@ -42,10 +42,22 @@ export default function Home(){
       }
    }
 
+   const changeTodoStatus = async(id) => {
+      const todoFilted = cards.find(element => element.id === id)
+      const resposta = await api.put(`todos/${id}`,{
+         ...todoFilted,
+         todoStatus: 'CONCLUIDO'
+      })
+      todoFilted.todoStatus = 'CONCLUIDO'
+      if(resposta.status === 200){
+         const todos = cards.filter(element => element.id !== id);
+         setCards([todoFilted, ...todos])
+       }
+   }
    return (
       <>
          <Header/>
-         <CardList deletePost={deletePost} cardLists={cards}/>
+         <CardList deletePost={deletePost} changeTodoStatus={changeTodoStatus} cardLists={cards}/>
       </>
    )
 }

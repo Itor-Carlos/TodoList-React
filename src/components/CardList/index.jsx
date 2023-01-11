@@ -4,11 +4,11 @@ import Card from "../Card";
 
 
 
-export default function CardList({deletePost,cardLists}){
+export default function CardList({deletePost, changeTodoStatus,cardLists}){
    return (
       <CardListContainer>
          {cardLists.map(element => (
-            <Card deletePost={deletePost} key={element.id} id={element.id} name={element.name} description={element.descricao} todoStatus={element.todoStatus} /> 
+            <Card deletePost={deletePost} changeTodoStatus={changeTodoStatus} key={element.id} id={element.id} name={element.name} description={element.descricao} todoStatus={element.todoStatus} /> 
          ))}
       </CardListContainer>
    )
